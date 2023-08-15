@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMAGE AI</title>
+
+  <!--FONT-AWESOME--->
+  <script src="https://kit.fontawesome.com/2a8c4a7fac.js" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="hero">
+    <div class="nav">
+      <div class="logo">
+        <img src="./images/logo.png" alt="">
+        <p>IMAGE AI</p>
+      </div>
+      <div class="menu"><i class="fa-solid fa-bars"></i></div>
+    </div>
+    <div class="navigation hidden">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">IMAGE TOOL</a></li>
+        <li><a href="">CONTACT</a></li>
+      </ul>
+    </div>
+
+    <div class="png a">
+      <div id="png1" class="filter">
+        <div class="layer" data-depth="2"><img src="./images/2.png" alt=""></div>
+      </div>
+    </div>
+
+    <div class="png b">
+      <div id="png2" class="filter">
+        <div class="layer" data-depth="9"><img src="./images/3.png" alt=""></div>
+      </div>
+    </div>
+
+    <div class="png f">
+      <div id="png6" class="filter">
+        <div class="layer" data-depth="-5"><img src="./images/8.png" alt=""></div>
+      </div>
+    </div>
+
+
+    <!-- 
+       -->
+
+    <div class="title">
+      <div class="content">
+        <h2 id="text">
+          <span data-depth-y="2">I</span>
+          <span data-depth-y="-3">M</span>
+          <span data-depth-y="5">A</span>
+          <span data-depth-y="-2">G</span>
+          <span data-depth-y="6">E</span>
+          <span data-depth-y="-4">&nbsp;</span>
+          <span data-depth-y="-5">A</span>
+          <span data-depth-y="4">I</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="png c">
+      <div id="png3" class="filter">
+        <div class="layer" data-depth="5"><img src="./images/4.png" alt=""></div>
+      </div>
+    </div>
+
+    <div class="png d">
+      <div id="png4" class="filter">
+        <div class="layer" data-depth="-6"><img src="./images/6.png" alt=""></div>
+      </div>
+    </div>
+
+    <div class="png e">
+      <div id="png5" class="filter">
+        <div class="layer" data-depth="3"><img src="./images/7.png" alt=""></div>
+      </div>
+    </div>
+
+    <div class="main">
+      <p class="subhead">IMAGE TOOL</p>
+      <h3>IMAGE AI is an AI system that can create realistic images and art from a description in natural language.</h3>
+      <p class="caption">Enter detailed description of your image.</p>
+      <div class="search">
+        <form action="/" method="post">
+          <input type="text" name="search" id="" placeholder="purple fur monster over blue moon" class="searchBar">
+          <input type="submit" value="Generate" class="btn">
+        </form>
+        <h1><%= titleRender %></h1>
+        <div class="line"></div>
+      </div>
+
+
+      <div class="imgGal">
+
+        <% imageRender.forEach((imageRender) =>{ %>
+          <div class="imgBox">
+            <img src="<%= imageRender %>" alt="">
+            <div class="overlay">
+              <div class="details">
+                <h3 class="head"><a href="<%= imageRender %>" target="_blank">OPEN IMAGE</a></h3>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+
+      </div>
+
+      <footer>
+        <div class="wave wave4"></div>
+        <div class="wave1 wave"></div>
+        <div class="wave2 wave"></div>
+        <div class="wave wave3"></div>
+        
+        <div class="footCon">
+          <h2>LET's WORK TOGETHER</h2>
+          <ul class="social">
+            <li><a href="https://github.com/ayushssshhh?tab=repositories"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/kumar-ayush-3b8a27240/"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+          </ul>
+
+          <p>©2023 ayushssshhh || POWERED BY OPEN AI || PERSONAL PROJECT</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- parallaxJs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
